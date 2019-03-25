@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>md5加密</title>
+<script type="text/javascript" src="md5.js"></script>
+<script src="base64.js"></script>
+<script type="text/javascript">  
+  //var hash = hex_md5("123sfsa");
+	//alert(Base64.encode('http://www.baidu.com'));
+	function calc(){
+		var key1=document.getElementById('key_first').value;
+		var key2=document.getElementById('key_second').value;
+		var ans=document.getElementById('answer');
+		var key=key1+key2;
+		var hash1=hex_md5(key);
+		var hash2=Base64.encode(hash1);
+		var yu='0123456789012345678901234567890123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+		var result='';
+		for(var i=0;i<11;i++)
+		{
+			result=result+yu[(hash2[i].charCodeAt()*hash2[i+11].charCodeAt()*hash2[i+22].charCodeAt()*hash2[i+33].charCodeAt())%yu.length];
+		}
+		ans.value=result;
+	}
+</script>  
+</head>
+
+<body>
+<span>key_first:</span>
+<input type="text" name="key_first" id="key_first" style="width:200px;height:20px;">
+</br>
+<span>key_second:</span>
+<input type="password" name="key_second" id="key_second" style="width:200px;height:20px;">
+</br>
+<button onclick="calc()" style="width:100px;height:50px;">calc</button>
+</br>
+<span>answer:</span>
+<input type="text" name="answer" id="answer" style="width:200px;height:20px;">
+</br>
+</body>
+</html>
