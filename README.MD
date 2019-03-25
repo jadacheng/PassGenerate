@@ -20,4 +20,4 @@
 
 ### 使用
 
-![1553474783718](C:\Users\30wish\AppData\Local\Temp\1553474783718.png)
+![image](https://github.com/jadacheng/PassGenerate/blob/master/1553474783718.png)
