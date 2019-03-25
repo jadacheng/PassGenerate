@@ -18,6 +18,6 @@
 
 
 
-### 使用:
+### 使用：
 
 ![image](https://github.com/jadacheng/PassGenerate/blob/master/1553474783718.png)
